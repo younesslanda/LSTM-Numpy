@@ -5,7 +5,7 @@ from sgd import SGD
 from model import TwoLayersLSTM
 
 def main():
-    data = open('alllines.txt', 'r').read() #Shakespeare corpus
+    data = open('corpus/alllines.txt', 'r').read() #Shakespeare corpus
     chars = list(set(data))
 
     data_size, vocab_size = len(data), len(chars)
@@ -106,3 +106,6 @@ def main():
                 break
             
         print("-" * 10)
+
+if __name__ == '__main__':
+    main()
